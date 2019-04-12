@@ -1,4 +1,4 @@
-let point
+let point, person1, person2, person, plus3, plus5
 
 console.log('----------- 1 -----------')
 // Возвращение одного и того же объекта
@@ -50,4 +50,21 @@ function createPerson (name, family) {
 	}
 
 	return person
+}
+
+
+
+console.log('----------- 4 -----------')
+// Генерация функции
+
+plus3 = getIter(3)
+plus5 = getIter(5)
+
+console.log(plus3(100))
+console.log(plus5(25))
+
+function getIter (delta) {
+	return function (base) {
+		return delta + base
+	}
 }
