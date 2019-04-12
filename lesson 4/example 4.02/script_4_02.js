@@ -1,4 +1,4 @@
-let func, beforeFn, number
+let beforeFn, number
 
 console.log('----------- 1 -----------')
 // Всплывающее объявление функции
@@ -14,7 +14,7 @@ function fn () {
 console.log('----------- 2 -----------')
 // Ленивое определние функции
 
-func = function func () {
+var func = function func () {
 	console.log('fired')
 }
 
@@ -25,7 +25,7 @@ func()
 console.log('----------- 3 -----------')
 // Имя функции при ленивом объявление функции
 
-func = function ABCDEF_012345 () {
+var func = function ABCDEF_012345 () {
 	console.log('fired')
 }
 
@@ -37,7 +37,7 @@ console.log({ func })
 console.log('----------- 4 -----------')
 // Отсутствие имени функции при ленивом объявление функции
 
-func = function () {
+var func = function () {
 	console.log('fired')
 }
 
