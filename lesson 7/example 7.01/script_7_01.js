@@ -1,56 +1,65 @@
-console.log('----------- 1 -----------')
-// То что уже знаем
+// console.log('----------- 1 -----------')
+// // То что уже знаем
 
-let x = 5
-const y = 5
-
-
-
-console.log('----------- 2 -----------')
-// Деструктуризация массива
-
-let [a, b, c, ,d] = [0, 1, 2, 3, 4, 5]
-console.log({ a, b, c, d})
+// let x = 5
+// const y = 5
 
 
 
-console.log('----------- 3 -----------')
-// spread
+// console.log('----------- 2 -----------')
+// // Деструктуризация массива
 
-let [a, b, ...c] = [0, 1, 2, 3, 4, 5]
-console.log({ a, b, c})
+// let [a, b, c, , d] = [0, 1, 2, 3, 4, 5]
+// console.log({ a, b, c, d})
 
-
-
-
-console.log('----------- 4 -----------')
-// spread и rest для функции
-
-console.log(
-	getSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-)
-
-function getSum (a, b, ...args) {
-
-	console.log(a, b, args)
-	console.log(a, b, ...args)
-
-	return Math.max(a, b, ...args)
-}
+// let a = array[0]
+// let [a] = array
 
 
 
-console.log('----------- 5 -----------')
-// Значения по умолчанию
+// console.log('----------- 3 -----------')
+// // spread
 
-let [name, family] = []
+// let [a, b, ...c] = [0, 1, 2, 3, 4, 5]
+// console.log({ a, b, c})
 
-console.log({ name, family })
 
 
-let [name = 'Алексей', family = getFamily(), ...rest] = []
 
-console.log({ name, family, rest })
+// console.log('----------- 4 -----------')
+// // spread и rest для функции
+
+// console.log(
+// 	getSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+// )
+
+// function getSum (a, b, ...args) {
+
+// 	console.log(a, b, args)
+// 	console.log(a, b, ...args)
+
+// 	return Math.max(a, b, ...args)
+// }
+
+
+
+// console.log('----------- 5 -----------')
+// // Значения по умолчанию
+
+// // let [name, family] = []
+
+// // console.log({ name, family })
+
+
+// let [name = 'Алексей', family = getFamily(), ...rest] = []
+
+// let [
+// 	name = 'Алексей',
+// 	family = getFamily(),
+// 	...rest
+// ] = []
+
+// console.log({ name, family, rest })
 
 function getFamily () {
 	return 'Данчин'
@@ -58,49 +67,52 @@ function getFamily () {
 
 
 
-console.log('----------- 6 -----------')
-// Деструктуризация объекта cо значениями по умолчанию и spred
+// console.log('----------- 6 -----------')
+// // Деструктуризация объекта cо значениями по умолчанию и spred
 
-let person = {
-	age: 10,
-	foo: 'bar',
-	array: [1, 2, 3]
-}
+// let person = {
+// 	age: 10,
+// 	foo: 'bar',
+// 	array: [1, 2, 3]
+// }
 
-let {
-	name = 'Алексей',
-	family = getFamily(),
-	age = 26,
-	...another
-} = person
+// let {
+// 	name = 'Алексей',
+// 	family = getFamily(),
+// 	age = 26,
+// 	...another
+// } = person
 
+// console.log(another)
 
+// console.log('----------- 7 -----------')
+// // Деструктуризация с переименованием
 
-console.log('----------- 7 -----------')
-// Деструктуризация с переименованием
+// const { width: w, height: h = 150 } = { width: 100 }
 
-const { width: w, height: h = 100 } = { width: 100 }
-
-console.log({ w, h })
-
-
-
-console.log('----------- 8 -----------')
-// Конкатинация
-
-const a = [0, 1, 2, 3]
-const b = [4, 5, 6, 7]
-
-const c = [...a, ...b, 8, 9, 10]
+// console.log({ w, h })
 
 
 
-console.log('----------- 9 -----------')
-// Деструктуризация аргумента функции
+// console.log('----------- 8 -----------')
+// // Конкатинация
+
+// const a = [0, 1, 2, 3]
+// const b = [4, 5, 6, 7]
+
+// const c = [...a, ...b, 8, 9, 10]
+
+// console.log(c)
 
 
-printGreeting()
 
-function printGreeting ({ name = 'Тимофей', family = 'Данчин' } = { name: 'Сергей', family: 'Петрович' }) {
-	console.log(`Привет! Меня зовут ${name} ${family}!`)
-}
+// console.log('----------- 9 -----------')
+// // Деструктуризация аргумента функции
+
+
+// printGreeting()
+
+// function printGreeting ({ name, family = 'Хорошин' }) {
+// function printGreeting (a = true, b = false) {
+// 	console.log(`Привет! Меня зовут ${name} ${family}!`)
+// }
