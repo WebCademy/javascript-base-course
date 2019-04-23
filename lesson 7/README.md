@@ -3,11 +3,11 @@
 Домашнюю работу можно присылать либо в качестве архива проекта в лс, либо, если вы умеете, ссылкой на репозиторий github с вашем форком.
 
   - Дополнительный материал:
-        - О [CRUD](https://ru.wikipedia.org/wiki/CRUD)
-        - О [ES-2015](https://learn.javascript.ru/es-modern)
-        - О [Fetch](https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch), [Fetch](https://learn.javascript.ru/fetch)
-        - База знаний [Stackoverflow](https://stackoverflow.com/)
-        - По всем вопрсам [ко мне](https://vk.com/aleksey_danchin)
+  - [CRUD](https://ru.wikipedia.org/wiki/CRUD)
+  - [ES-2015](https://learn.javascript.ru/es-modern)
+  - [Fetch](https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch), [Fetch](https://learn.javascript.ru/fetch)
+  - База знаний [Stackoverflow](https://stackoverflow.com/)
+  - По всем вопрсам [ко мне](https://vk.com/aleksey_danchin)
 
   - Обратите внимание:
       - для каждой страницы нужен свой скрипт
