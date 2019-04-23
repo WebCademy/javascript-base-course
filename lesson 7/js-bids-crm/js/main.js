@@ -1,7 +1,7 @@
 const trElementTemplate = `
 <tr class="bid-row">
 	<td scope="row">
-		<a href="view-and-edit.html">Заявка №%ID%</a>
+		<a href="view-and-edit.html?id=%ID%">Заявка №%ID%</a>
 	</td>
 	<td>%CLIENT_NAME%</td>
 	<td>
@@ -43,12 +43,15 @@ function main () {
 
 				tbodyElement.innerHTML = trElementTemplate
 					.replace('%ID%', item.id)
+					.replace('%ID%', item.id)
 					.replace('%GOOD%', item.good)
 					.replace('%PRICE%', item.price)
 					.replace('%CLIENT_NAME%', item.clientName)
 
 				rootDir.append(tbodyElement.firstElementChild)
 			}
+
+			console.log(data)
 		})
 }
 
