@@ -17,23 +17,11 @@ const trElementTemplate = `
 main()
 
 function main () {
-	const url = 'http://localhost:3000'
+	const url = 'http://89.108.64.67:3000'
 	const key = '?key=testtesttest'
 	const address = '/orders'
 
-	const newOrder = JSON.stringify({
-		good: "Микроволновка",
-		price: 12500,
-		clientName: "Дмитрий",
-		managerName: "Анастасия",
-		paymentStatus: 0,
-		requestStatus: 0
-	})
-
-	fetch(url + address + key, {
-		method: 'GET',
-		// body: newOrder
-	})
+	fetch(url + address + key, { method: 'GET' })
 		.then(answer => answer.json())
 		.then(data => {
 			const rootDir = document.getElementById('listViewer')
@@ -50,8 +38,6 @@ function main () {
 
 				rootDir.append(tbodyElement.firstElementChild)
 			}
-
-			console.log(data)
 		})
 }
 

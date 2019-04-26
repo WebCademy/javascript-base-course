@@ -8,7 +8,7 @@
 			return acc
 		}, {})
 
-	const url = 'http://localhost:3000'
+	const url = 'http://89.108.64.67:3000'
 	const key = '?key=testtesttest'
 	const address = '/order/' + searchParams.id
 	
@@ -50,7 +50,7 @@
 		const orderData = {
 			clientName: document.querySelector('[data-order-client-name]').value || 'NotName',
 			good: document.querySelector('[data-new-order-good]').value || 'NotGood',
-			price: parseInt(document.querySelector('[data-new-order-price]').value) || 1,
+			price: parseInt(document.querySelector('[data-new-order-price]').value) || 0,
 		}
 
 		return orderData

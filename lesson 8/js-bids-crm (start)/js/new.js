@@ -10,17 +10,14 @@
 
 		const orderData = JSON.stringify(getOrderData())
 
-		const url = 'http://localhost:3000'
+		const url = 'http://89.108.64.67:3000'
 		const key = '?key=testtesttest'
 		const address = '/order'
 
-		fetch(url + address + key, {
-			method: 'POST',
-			body: orderData
-		})
+		fetch(url + address + key, { method: 'POST', body: orderData })
 			.then(answer => answer.json())
 			.then(data => {
-				location.href = 'index.html'
+				location.replace('index.html')
 			})
 	}
 
@@ -35,5 +32,4 @@
 
 		return orderData
 	}
-
 })()
