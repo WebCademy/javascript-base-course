@@ -81,7 +81,7 @@
 		const rootDir = document.getElementById('listViewer')
 		rootDir.innerHTML = ''
 
-		// Выборка отображаемых товаров по параметрам фильтрации
+		// Выборка отображаемых товаров по параметрам фильтрации.
 		const data = originalData.filter(item => {
 			const isRequestStatusCoincide = filterParams.requestStatus === 0 || filterParams.requestStatus === item.requestStatus
 			const isPaymentStatusCoincide = filterParams.paymentStatus === 0 || filterParams.paymentStatus === item.paymentStatus

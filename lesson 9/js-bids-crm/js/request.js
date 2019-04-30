@@ -11,7 +11,7 @@
 		deleteOrderById: (id, callback) => localFetch(`/order/${id}`, { method: 'DELETE' }, callback),
 		getOrderById: (id, callback) =>  localFetch(`/order/${id}`, { method: 'GET' }, callback),
 		reinit: callback => localFetch(`/reinit`, { method: 'POST' }, callback),
-		getList: callback => localFetch(`/orders`, { method: 'GET' }, callback),
+		getList: callback => localFetch(`/orders`, { method: 'GET' }, callback)
 	}
 
 	window.dbRequest = dbRequest

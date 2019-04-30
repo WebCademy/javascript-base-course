@@ -5,16 +5,16 @@
 
 	// Базовая инициализация данных формы после запроса этих данных у сервера.
 	dbRequest.getOrderById(searchParams.id, data => {
-		document.querySelector('[data-order-id]').textContent = data.id
-		document.querySelector('[data-order-client-name]').value = data.clientName
-		document.querySelector('[data-order-good]').value = data.good
-		document.querySelector('[data-order-price]').value = data.price
 		document.querySelector('[data-order-request-status]').value = data.requestStatus
 		document.querySelector('[data-order-payment-status]').value = data.paymentStatus
+		document.querySelector('[data-order-client-name]').value = data.clientName
+		document.querySelector('[data-order-price]').value = data.price
+		document.querySelector('[data-order-id]').textContent = data.id
+		document.querySelector('[data-order-good]').value = data.good
 	})
 
 	// Инициализация кнопки сохранение изменения.
-	// TODO: Стоит ли заменить data-order-dave на data-order-edit?
+	// TODO: Стоит ли заменить data-order-save на data-order-edit?
 	document
 		.querySelector('[data-order-save]')
 		.addEventListener('click', event => {
@@ -42,11 +42,11 @@
 	// Функция сбора и формирования объекта отредактированного заказа.
 	function getOrderData () {
 		return {
-			clientName: document.querySelector('[data-order-client-name]').value || 'NotName',
-			good: document.querySelector('[data-order-good]').value || 'NotGood',
-			price: parseInt(document.querySelector('[data-order-price]').value) || 0,
 			requestStatus: parseInt(document.querySelector('[data-order-request-status]').value) || 1,
-			paymentStatus: parseInt(document.querySelector('[data-order-payment-status]').value) || 1
+			paymentStatus: parseInt(document.querySelector('[data-order-payment-status]').value) || 1,
+			clientName: document.querySelector('[data-order-client-name]').value || 'NotName',
+			price: parseInt(document.querySelector('[data-order-price]').value) || 0,
+			good: document.querySelector('[data-order-good]').value || 'NotGood'
 		}
 	}
 
