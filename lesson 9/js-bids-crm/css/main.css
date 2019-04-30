@@ -1,0 +1,50 @@
+html,
+body {
+	background-color: #EBF5F9;
+	font-family: 'Open Sans';
+}
+
+.heading {
+    margin: 20px 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-1 {
+    font-size: 34px;
+    font-weight: 200;
+    margin: 0;
+}
+
+.inline {
+    display: inline-block;
+} 
+
+.fs-14 {
+	font-size: 14px;
+}
+
+.fs-14 .badge {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.badges-list {
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 15px;
+	list-style-type: none;
+}
+
+.badges-list li { margin-bottom: 10px; }
+
+.badge-lg {
+	font-size: 14px;
+	padding: .25em .6em 0.8em;
+} 
+.badge-lg .icon {
+	font-size: 22px;
+	margin-bottom: 4px;
+}

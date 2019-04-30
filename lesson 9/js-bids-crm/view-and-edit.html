@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<!-- User CSS -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
+	<!-- Title -->
+	<title>Работа с заявкой</title>
+</head>
+
+<body>
+
+	<!-- container-fluid -->
+	<div class="container-fluid">
+
+		<!-- Шапка -->
+		<div class="heading">
+			<div class="title-1 inline">Работа с заявкой</div>
+			<a href="index.html" class="btn btn-link">Вернуться назад</a>
+		</div>
+		<!-- // Шапка -->
+		
+		<!-- row -->
+		<div class="row">
+			<!-- col -->
+			<div class="col">
+				<form action="">
+					<!-- card -->
+					<div class="card mb-4">
+						<div class="card-header">Данные о заявке</div>
+						<div class="card-body">
+
+							<div class="row mb-3">
+								<div class="col-md-2"><strong>ID:</strong></div>
+								<div class="col"> Заявка №<span data-order-id></span> </div>
+							</div>
+
+							<div class="row mb-3">
+								<div class="col-md-2"><strong>Имя:</strong></div>
+								<div class="col">
+									<input type="text" class="form-control" value="" data-order-client-name>
+								</div>
+							</div>
+
+							<div class="row mb-3">
+								<div class="col-md-2"><strong>Продукт:</strong></div>
+								<div class="col">
+									<input type="text" class="form-control" value="" data-order-good>
+									<!-- <span class="badge badge-light badge-lg">
+										<span class="icon">🛴</span> Самокат
+									</span> -->
+								</div>
+							</div>
+
+							<div class="row mb-3">
+								<div class="col-md-2"><strong>Стоимость:</strong></div>
+								<div class="col">
+									<div class="input-group">
+									  <input type="text" class="form-control" value="8000" data-order-price>
+									  <div class="input-group-append">
+									    <span class="input-group-text">копеек</span>
+									  </div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row mb-3">
+								<div class="col-md-2">
+									<strong>Статус заявки:</strong> 
+								</div>
+								<div class="col">
+									<select class="custom-select" id="inputGroupSelect01" data-order-request-status>
+										<option value='0' selected="">Выберите...</option>
+										<option value="1">Новая</option>
+										<option value="2">В работе</option>
+										<option value="3">Ожидается оплата</option>
+										<option value="4">Завершена</option>
+										<option value="5">Отказ</option>
+									</select>
+								</div>
+							</div>
+							<div class="row mb-3">
+								<div class="col-md-2">
+									<strong>Статус оплаты:</strong> 
+								</div>
+								<div class="col">
+									<select class="custom-select" id="inputGroupSelect01" data-order-payment-status>
+										<option value='0' selected="">Выберите...</option>
+										<option value="1">Не оплачено</option>
+										<option value="3">Частичная оплата</option>
+										<option value="4">Полная оплата</option>
+										<option value="5">Возврат</option>
+									</select>
+								</div>
+							</div>
+
+						<!-- 	<div class="row mb-3">
+								<div class="col-md-2"><strong>Дата создания:</strong></div>
+								<div class="col"> 2019-04-23 13:52:13 </div>
+							</div> -->
+		
+						</div>
+					</div>
+					<!-- //card -->
+					<button type="button" class="btn btn-primary" data-order-save>Сохранить изменения</button>
+					<button type="button" class="btn btn-danger" data-order-delete>Удалить</button>
+				</form>
+			</div>
+			<!-- //col -->
+		</div>
+		<!-- //row -->
+
+	</div>
+	<!-- // container-fluid -->
+
+	<footer class="container-fluid pt-4 my-md-5 pt-2 border-top text-left">
+		<p><a class="text-muted" href="hints.html">Подсказки</a></p>
+	</footer>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="libs/jquery/jquery-3.3.1.min.js"></script>
+	<script src="libs/popper/popper.min.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<!-- User JS -->
+	<script src="js/request.js"></script>
+	<script src="js/view-and-edit.js"></script>
+</body>
+
+</html>
