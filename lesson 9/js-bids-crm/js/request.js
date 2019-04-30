@@ -1,4 +1,6 @@
 ;(function () {
+	'use strict'
+	
 	const url = 'http://89.108.64.67:3000'
 	const key = '?key=testtesttest'
 
