@@ -33,14 +33,6 @@ loadImage1(url, image => {
 
 console.log('----------- 4 -----------')
 
-loadImage1(url, image => {
-	context.drawImage(image, 100, 100, 200, 200)
-})
-
-
-
-console.log('----------- 5 -----------')
-
 loadImage2(url)
 	.then(image => {
 		context.drawImage(image, 100, 100, 200, 200)
@@ -48,7 +40,7 @@ loadImage2(url)
 
 
 
-console.log('----------- 6 -----------')
+console.log('----------- 5 -----------')
 
 main()
 
