@@ -8,6 +8,19 @@
   - [pm2](http://pm2.keymetrics.io/)
   - [webpack](https://webpack.js.org/), [webpack за 15 минут (2017!)](https://proglib.io/p/webpack-in-15/)
   - [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
-  - [Gist Tempalte](https://gist.github.com/Aleksey-Danchin/4170890f2d50ebe6e1d6d8cf6a05a3f3)
+  - [Gist Template](https://gist.github.com/Aleksey-Danchin/4170890f2d50ebe6e1d6d8cf6a05a3f3)
   - [Pug](https://pugjs.org/api/getting-started.html)
   - [Git](https://git-scm.com/), [Tutorial](https://git-scm.com/book/ru/v2)
+
+
+```
+:~@ npm install --save-dev @babel/core @babel/node @babel/cli @babel/preset-env
+```
+
+`.babelrc`
+
+```
+{
+  "presets": ["@babel/preset-env"]
+}
+```
