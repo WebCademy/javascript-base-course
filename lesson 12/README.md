@@ -24,3 +24,5 @@
   "presets": ["@babel/preset-env"]
 }
 ```
+
+Домашнее задание: перенести срм на webpack-dev-server

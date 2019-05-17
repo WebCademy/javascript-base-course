@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<!-- User CSS -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
+	<!-- Title -->
+	<title>Список заявок</title>
+</head>
+
+<body>
+	
+	<!-- container-fluid -->
+	<div class="container-fluid">
+
+		<!-- Шапка -->
+		<div class="heading">
+			<div class="title-1 inline">Все заявки </div>
+			<a href="new.html" class="btn btn-primary btn-sm">Создать заявку</a>
+			<button type="button" class="btn btn-primary" data-generate>Сгенерировать 5 товаров</button>
+		</div>
+		<!-- // Шапка -->
+
+		<!-- Фильтр -->
+		<form>
+			<div class="form-row">
+				<div class="col">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<label class="input-group-text" for="inputGroupSelect01">Статус заявки</label>
+						</div>
+						<select class="custom-select" id="inputGroupSelect01" data-sortbar-request-status>
+							<option value='0' selected>Выберите...</option>
+							<option value="1">Новая</option>
+							<option value="2">В работе</option>
+							<option value="3">Ожидается оплата</option>
+							<option value="4">Завершена</option>
+							<option value="5">Отказ</option>
+						</select>
+					</div>
+				</div>
+				<div class="col">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<label class="input-group-text" for="inputGroupSelect01">Статус оплаты</label>
+						</div>
+						<select class="custom-select" id="inputGroupSelect01" data-sortbar-payment-status>
+							<option value='0' selected>Выберите...</option>
+							<option value='1'>Нет оплаты</option>
+							<option value='2'>Частично</option>
+							<option value='3'>Оплачено</option>
+							<option value='4'>Возврат</option>
+						</select>
+					</div>
+				</div>
+				<div class="col">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<label class="input-group-text" for="inputGroupSelect01">Продукт</label>
+						</div>
+						<select class="custom-select" id="inputGroupSelect01" data-sortbar-goods>
+							<option value='0' selected>Выберите...</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</form>
+		<!-- // Фильтр -->
+
+		<table class="table fs-14">
+			<thead>
+				<tr>
+					<th style="width:150px;">ID</th>
+					<th>Имя</th>
+					<th>Товар</th>
+					<th>Цена</th>
+					<th>Статус</th>
+					<th>Оплата</th>
+				</tr>
+			</thead>
+			<tbody id='listViewer'>
+				<!-- <tr class="bid-row">
+					<td scope="row">
+						<a href="view-and-edit.html">Заявка №1</a>
+					</td>
+					<td>Юрий Васильев</td>
+					<td>
+						<span class="badge badge-light badge-lg">
+							<span class="icon">🛴</span> Самокат
+						</span>
+					</td>
+					<td>8000.00 руб.</td>
+					<td><span class="badge badge-primary">Новая</span></td>
+					<td><span class="badge badge-secondary">Нет оплаты</span></td>
+				</tr> -->
+			</tbody>
+		</table>
+	</div>
+	<!-- // container-fluid -->
+
+	<footer class="container-fluid pt-4 my-md-5 pt-2 border-top text-left">
+		<p><a class="text-muted" href="hints.html">Подсказки</a></p>
+	</footer>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<!-- <script src="libs/jquery/jquery-3.3.1.min.js"></script> -->
+	<!-- <script src="libs/popper/popper.min.js"></script> -->
+	<!-- <script src="libs/bootstrap/js/bootstrap.min.js"></script> -->
+	<!-- User JS -->
+	<!-- <script src="js/request.js"></script> -->
+	<!-- <script src="js/index.js"></script> -->
+	<script src='/dist/index.js'></script>
+</body>
+
+</html>
