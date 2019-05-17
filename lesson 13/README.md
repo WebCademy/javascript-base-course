@@ -1,4 +1,11 @@
-https://habr.com/ru/post/106912/
+# Материал
 
-:~$ npm install --save-dev @babel/core @babel/node @babel/cli @babel/preset-env @babel/plugin-transform-runtime @babel/runtime
- babel-loader webpack webpack-dev-server webpack-cli 
+  - [Удачная модель ветвления для Git](https://habr.com/ru/post/106912/)
+  - [Gist Template](https://gist.github.com/Aleksey-Danchin/4170890f2d50ebe6e1d6d8cf6a05a3f3)
+
+# Домашнее задание №13
+
+  - Инициировать проект срм с использованием `webpack-dev-server` и `babel`.
+  - Переписать модуль `dbRequest` с использование `axios`
+  - Переписать всякое использование `dbRequest` в ассихронный вид как было показано на лекции.
+  - P.S. постарайтесь инициировать проект самостоятельно и искать на возникшие проблемы ответы в гугл, github и stackoverflow.
