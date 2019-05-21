@@ -19,7 +19,8 @@ const trElementTemplate = `
 const filterParams = {
 	requestStatus: 0,
 	paymentStatus: 0,
-	good: 0
+	good: 0,
+	maxPrice: Infinity
 }
 
 // Массив всех товаров на сервере
@@ -61,6 +62,14 @@ document
 		filter()
 	})
 
+const sortBarPrice = document.querySelector('[data-sortbar-price]')
+sortBarPrice.addEventListener('mousemove', function (event) {
+	filterParams.maxPrice = Number(event.target.value)
+	document.querySelector('[data-sortbar-price-show]').textContent = getPriceNormalize(filterParams.maxPrice)
+	filter()
+})
+
+
 // Инициализация кнопки генерации новых заказов.
 document
 	.querySelector('[data-generate]')
@@ -88,8 +97,9 @@ function filter () {
 		const isRequestStatusCoincide = filterParams.requestStatus === 0 || filterParams.requestStatus === item.requestStatus
 		const isPaymentStatusCoincide = filterParams.paymentStatus === 0 || filterParams.paymentStatus === item.paymentStatus
 		const isGoodCoincide = filterParams.good === 0 || filterParams.good === goods.indexOf(item.good)
+		const isCoincidenPrice = Number(item.price) <= filterParams.maxPrice
 
-		return isRequestStatusCoincide && isPaymentStatusCoincide && isGoodCoincide
+		return isRequestStatusCoincide && isPaymentStatusCoincide && isGoodCoincide && isCoincidenPrice
 	})
 
 	// Непосредственное отображение товаров после выборки с использование тектового шаблона.
@@ -132,6 +142,10 @@ function updateOriginalData (data) {
 
 		goodsSortbar.append(optionElement)
 	}
+
+	const prices = originalData.map(x => x.price)
+	sortBarPrice.setAttribute('min', Math.min(...prices))
+	sortBarPrice.setAttribute('max', Math.max(...prices))
 }
 
 // Функция нормализации цены для отображения на странице.
